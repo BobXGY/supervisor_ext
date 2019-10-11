@@ -15,5 +15,6 @@ class Ext1:
         return 'hello'
 
 
-def myext(supervisord):
+def myext(supervisord, **config):
+    retries = int(config.get('retries', 0))
     return Ext1(supervisord)
