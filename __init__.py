@@ -1,3 +1,1 @@
-from ext import Ext1, myext
-
-
+# this is a package

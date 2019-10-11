@@ -1,6 +1,5 @@
 from os import system
 
-
 class Ext1:
     def __init__(self, supervisord):
         self.supervisord = supervisord
