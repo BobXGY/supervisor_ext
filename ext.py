@@ -2,7 +2,7 @@ from os import system
 
 
 class Ext1:
-    def __init__(self, supervisord, args):
+    def __init__(self, supervisord):
         self.supervisord = supervisord
         self.args = args
 
@@ -13,5 +13,5 @@ class Ext1:
         return system('ls')
 
 
-def ext1(supervisord, **args):
-    return Ext1(supervisord, args)
+def myext(supervisord):
+    return Ext1(supervisord)
