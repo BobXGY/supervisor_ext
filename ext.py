@@ -2,9 +2,8 @@ from os import system
 
 
 class Ext1:
-    def __init__(self, supervisord, config):
+    def __init__(self, supervisord):
         self.supervisord = supervisord
-        self.args = config
 
     def add(self, num1: int, num2: int):
         return num1 + num2
@@ -16,7 +15,5 @@ class Ext1:
         return 'hello'
 
 
-def myext(supervisord, **config):
-    retries = int(config.get('retries', 0))
-    ext1 = Ext1(supervisord, retries)
-    return ext1
+def myext(supervisord):
+    return Ext1(supervisord)
